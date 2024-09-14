@@ -4,7 +4,9 @@ Odin Project Todo List - Attempt No. 2
 
 Use date-fns for date formatting and such
 
+- Set up date-fns
 - Make To-Do class
+- Make form for todo info
 - Make Project Class to house the Todos
 - Consider default / "Home Collection"
 - Keep application logic separate from DOM stuff (so modules and such)
