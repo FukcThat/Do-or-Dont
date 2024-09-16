@@ -3,7 +3,7 @@ body {
     background-color: rgb(50, 50, 50);
 }
 
-input {
+input, select {
     padding: 0.25rem;
     border-radius: 0.75rem;
     border: none;
@@ -36,7 +36,7 @@ input[type="radio"]::before {
     padding: 1rem;
     background-color: rgb(211, 204, 199);
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
     border-radius: 1rem;
@@ -54,6 +54,7 @@ input[type="radio"]::before {
 
 .noteInput {
     grid-row: span 2;
+    grid-column: span 2;
 }
 
 .priorityButtons {
@@ -83,4 +84,12 @@ input[type="radio"]#priorityInput--low {
 
 input[type="radio"]#priorityInput--low::before {
     box-shadow: inset 1em 1em rgb(63, 124, 45);
+}
+
+.newTodoForm--submit-btn {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: rgb(137, 168, 137);
+    border: none;
+    border-radius: 1rem;
 }

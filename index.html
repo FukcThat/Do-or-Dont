@@ -15,6 +15,11 @@
         placeholder="What would you like to do?"
         required
       />
+      <select name="collection" id="collectionInput">
+        <option value="default">Put into collection?</option>
+        <option value="home">Home</option>
+        <option value="other">Other</option>
+      </select>
       <div class="moreInfoGroup">
         <!-- DueDate Info -->
         <svg
@@ -74,6 +79,7 @@
       </div>
       <input type="text" class="noteInput" placeholder="Anything to add?" />
     </form>
+    <button type="submit" class="newTodoForm--submit-btn">Add new Todo</button>
     <!-- newCollectionform -->
   </body>
 </html>
