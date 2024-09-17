@@ -1,4 +1,4 @@
-// import Todo class
+import Todo from "./Todo.js";
 // import collection data
 // import renderOneProject functionality
 // import check local storage functionality
