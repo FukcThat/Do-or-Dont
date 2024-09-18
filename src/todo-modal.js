@@ -1,47 +1,50 @@
-import Todo from "./Todo.js";
-// import collection data
-// import renderOneProject functionality
-// import check local storage functionality
+import Todo from "./Todo";
+// // import collection data
+// // import renderOneProject functionality
+// // import check local storage functionality
 
 // Get all form Inputs
+const taskInput = document.querySelector(".taskInput");
+const collectionInput = document.querySelector("#collectionInput");
+const dueDateInput = document.querySelector(".dueInput");
+const priorityInput = document.querySelectorAll(".priorityInput");
+const assignedInput = document.querySelector(".assignedInput");
+const noteInput = document.querySelector(".noteInput");
 
-// Open Form
+const todoFormSubmitBtn = document.querySelector(".newTodoForm--submit-btn");
 
-// Close Form
+// Open Form Function
+
+// Close Form Function
 
 // Submit Todo-Form
-const addTodo = () => {
-  // On form submit
-  // get form element values
+const submitTodoForm = () => {
+  // --> Make variable for checked priority value
+  const checkedPriorityInput = document.querySelector(
+    "input[name=priorityInput]:checked"
+  );
 
-  const taskInput = document.querySelector(".taskInput");
-  const collectionInput = document.querySelector("#collectionInput");
-  const dueDateInput = document.querySelector(".dueInput");
-  const priorityInput = document.querySelectorAll(".priorityInput");
-  const addignedInput = document.querySelector(".assignedInput");
-  const noteInput = document.querySelector(".noteInput");
-
-  // -> create elements for
-  // ---> task, date, notes, assigned, prio
-
-  const todoContainer = document.createElement("div");
-  const todoTask = document.createElement("h4");
-  const todoDueDate = document.createElement("p");
-  // priority should be displayed as radio group when todo is entended, or as the 'complete task btn"'s color when condensed
-  // collection should just be the same select with the selected value displayed, if no value is selected, show "All" pr smt
-
-  // ---> with values from form
-
-  todoTask.textContent = taskInput.value;
-  todoDueDate.textContent = dueDateInput.value;
-
-  todoContainer.appendChild(todoTask);
-  todoContainer.appendChild(todoDueDate);
-  // -> append to collection container
-  // ---> Default: Push to "All" collection
+  // Validate Inputs
+  if (taskInput.value === "") {
+    window.alert("Please add at least a task name");
+  } else {
+    // Make new todo with form values
+    const newTodo = new Todo(
+      taskInput.value,
+      collectionInput.value,
+      dueDateInput.value,
+      checkedPriorityInput.value,
+      assignedInput.value,
+      noteInput.value
+    );
+    console.log(newTodo);
+  }
+  // --> Push the new todo object to relevant collection
+  // // --> Re-render To-dos & close modal
+  // // ---> Save collection data in local storage
 };
 
-// changePriority
-// changeStatus
-// edit
-// delete
+// Event Listener function to open, close and submit buttons
+export const todoFormEventListeners = () => {
+  todoFormSubmitBtn.addEventListener("click", submitTodoForm);
+};

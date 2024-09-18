@@ -15,3 +15,5 @@ class Todo {
     this.notes = todoNotes;
   }
 }
+
+module.exports = Todo;
