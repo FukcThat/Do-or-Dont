@@ -1,4 +1,4 @@
-// import collectoin data
+import Collection from "./Collection";
 // import check local storage functionality
 
 // Render collection function
@@ -9,14 +9,36 @@
 // --> Append nav btn to collection container
 
 // Render To do functon
-// --> Get Todo container
-// --> Set innerHTML of container to ""
-// --> Create a new div forEach to do and add a classlist for styling
-// --> Create a delete btn, add eventlistener onclick and append to to do div
-// --> For Each Element separately;
-// ----> create new element
-// ----> set values
-// ----> append to div
+export const renderTask = (Collection) => {
+  // --> Get Todo container
+  const taskContainer = document.querySelector(".task-container");
+  taskContainer.innerHTML = "";
+
+  // --> Create a new div forEach to do and add a classlist for styling
+  Collection.forEach((task, index) => {
+    const taskDiv = document.createElement("div");
+    taskDiv.classList.add("task-div");
+  });
+
+  // --> Create a delete btn, add eventlistener onclick and append to to do div
+  // --> For Each Element separately;
+  // ----> create new element
+  // ----> set values
+  // ----> append to div
+
+  // Task
+  let task = document.createElement("p");
+  task.textContent = Todo.task;
+  taskDiv.appendChild(task);
+
+  taskContainer.appendChild(taskDiv);
+
+  // Collection Select
+  // DueDate
+  // Priority
+  // Assignment
+  // Notes
+};
 
 // Render Default Collection (All to dos)
 // --> Make empty array for all todo's

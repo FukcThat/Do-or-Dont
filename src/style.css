@@ -93,3 +93,16 @@ input[type="radio"]#priorityInput--low::before {
     border: none;
     border-radius: 1rem;
 }
+
+.task-container {
+    height: 30rem;
+    width: 100%;
+    background-color: rgb(146, 142, 139);
+    border-radius: 1rem;
+}
+
+.task-div {
+    height: 15rem;
+    width: 15rem;
+    background-color: rgb(211, 204, 199);
+}

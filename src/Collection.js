@@ -1,12 +1,15 @@
 class Collection {
-  constructor(projectName) {
+  constructor(collectionName) {
     this.collection = [];
-    this.projectName = projectName;
+    this.collectionName = collectionName;
   }
 
   // Add todo
+  addTask(taskItem) {
+    this.collection.push(taskItem);
+  }
   // Remove Todo
   // Get Todo Collection
 }
 
-// Export
+module.exports = Collection;
