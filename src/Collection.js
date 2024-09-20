@@ -1,12 +1,15 @@
+const { renderTodos } = require("./render");
+
 class Collection {
   constructor(collectionName) {
-    this.collection = [];
+    this.todoList = [];
     this.collectionName = collectionName;
   }
 
   // Add todo
-  addTask(taskItem) {
-    this.collection.push(taskItem);
+  addTodo(taskItem) {
+    this.todoList.push(taskItem);
+    renderTodos(this.todoList);
   }
   // Remove Todo
   // Get Todo Collection

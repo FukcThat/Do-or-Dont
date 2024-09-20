@@ -3,5 +3,5 @@ import Collection from "./Collection";
 
 export const collectionData = [];
 
-const mainCollection = new Collection("All To-Do's");
+const mainCollection = new Collection("Main");
 collectionData.push(mainCollection);

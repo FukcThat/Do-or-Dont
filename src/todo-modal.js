@@ -1,3 +1,5 @@
+import { collectionData } from "./data";
+import { renderTodos } from "./render";
 import Todo from "./Todo";
 // // import collection data
 // // import renderOneProject functionality
@@ -37,10 +39,17 @@ const submitTodoForm = () => {
       assignedInput.value,
       noteInput.value
     );
-    console.log(newTodo);
+
+    collectionData.forEach((collection) => {
+      if (collection.collectionName === "Main") {
+        collection.addTodo(newTodo);
+      }
+    });
   }
   // --> Push the new todo object to relevant collection
-  // // --> Re-render To-dos & close modal
+
+  // --> Re-render To-dos & close modal
+
   // // ---> Save collection data in local storage
 };
 
